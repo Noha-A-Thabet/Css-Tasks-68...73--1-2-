@@ -1,0 +1,103 @@
+/* Q1 */
+:root{
+    --primaryColor : #ff5722;
+    --seconderyColor :white;
+    --secondTask:darkcyan;
+}
+
+.q1{
+    color:var(--seconderyColor);
+    width:150px;
+    margin:80px auto;
+    background-color: var(--primaryColor);
+    position:relative;
+    text-align: center;
+}
+
+.q1::before {
+    content:"";
+    position: absolute;
+    background-color: var(--primaryColor);
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    transform: skew(10deg,10deg);
+    -webkit-transform: skew(10deg,10deg);
+    -moz-transform: skew(10deg,10deg);
+    -ms-transform: skew(10deg,10deg);
+    -o-transform: skew(10deg,10deg);
+    z-index:-1;
+}
+
+.q1::after {
+    content:"";
+    position: absolute;
+    background-color: var(--primaryColor);
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    transform: skew(-10deg,-10deg);
+    -webkit-transform: skew(-10deg,-10deg);
+    -moz-transform: skew(-10deg,-10deg);
+    -ms-transform: skew(-10deg,-10deg);
+    -o-transform: skew(-10deg,-10deg);
+    z-index:-1;
+}
+
+
+
+/* Task 2  */
+.q2{
+    color:var(--seconderyColor);
+    background-color: var(--secondTask);
+    width:150px;
+    height:100px;
+    margin:50px auto;
+    text-align: center;
+    position: relative;
+    line-height:100px;
+
+}
+
+.q2::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: var(--secondTask);
+    z-index:-1;
+    transform: translate(-14px,0px ) skew(16deg,0deg)   ;
+    -webkit-transform: translate(-14px,0px ) skew(16deg,0deg)   ;
+    -moz-transform: translate(-14px,0px ) skew(16deg,0deg)   ;
+    -ms-transform: translate(-14px,0px ) skew(16deg,0deg)   ;
+    -o-transform: translate(-14px,0px ) skew(16deg,0deg)   ;
+}
+
+.q2::after{
+    content: "";
+    position: absolute;
+    background-color: var(--secondTask);
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 100%;
+    transform: translate(-43px , 0px) skew(17deg ,358deg );
+}
+
+/* Q3 */
+/*  matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+.class {
+    transform:matrix(3, 0.2679, 0, 3, 20, 100);
+        /* scale x => 3       
+          skew x  => 0.2679
+          scale y => 0
+          transalte x => 3
+          translate y => 100    */
+
+}
+
